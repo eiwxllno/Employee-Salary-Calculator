@@ -30,7 +30,17 @@ class Employee{
     }
     return $regular_pay;
   }
+   function calculateOvertimePay(){
+      if ($this->hours_worked > 40){
+      $excessHours = $this->hours_worked - 40;
+      $overtime_pay = $this->rate * $excessHours * 1.5;
+      }
+      else{
+        $overtime_pay = "No overtime pay";
+      }
+      return $overtime_pay;
+   }
 
+  }
 
-}
-?>
+  ?>

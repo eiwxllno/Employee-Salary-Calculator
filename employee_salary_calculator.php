@@ -8,6 +8,7 @@ $hours_worked = " ";
 $skill_level = " ";
 $rate = 0.0 ;
 $regular_pay = 0.0;
+$overtime_pay = 0.0;
 
   if($_POST){
      $first_name = $_POST['first_name'];
@@ -22,6 +23,8 @@ $regular_pay = 0.0;
    
     $employee->hours_worked = $hours_worked;
     $regular_pay = $employee->calculateRegularPay();
+
+    $overtime_pay =$employee->calculateOvertimePay();
   }
 ?>
 <!DOCTYPE html>
@@ -116,8 +119,8 @@ $regular_pay = 0.0;
             <p class="card-text fw-bold">Hours Worked: <?php echo $hours_worked ?> </p>
             <p class="card-text fw-bold">Skill: <?php echo $skill_level ?> </p>
             <p class="card-text fw-bold">Rate: <?php echo $rate ?> </p>
-            <p class="card-text fw-bold">Regular Pay:<?php echo $regular_pay ?></p> 
-            <p class="card-text fw-bold">Overtime Pay:</p>
+            <p class="card-text fw-bold">Regular Pay: <?php echo $regular_pay ?></p> 
+            <p class="card-text fw-bold">Overtime Pay: <?php echo $overtime_pay ?> </p>
             <p class="card-text fw-bold">Total Pay:</p>
           </div>
         </div>
