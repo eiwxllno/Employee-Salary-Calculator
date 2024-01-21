@@ -41,6 +41,26 @@ class Employee{
       return $overtime_pay;
    }
 
+   function calculateTotalPay(){
+    if ($this->hours_worked > 40){
+      $totalPay = $this->calculateRegularPay() + $this->calculateOvertimePay();
+    }
+    else{
+      $totalPay = $this->calculateRegularPay();
+    }
+    return $totalPay;
+   }
   }
+?>
 
-  ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
