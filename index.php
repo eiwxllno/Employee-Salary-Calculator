@@ -12,6 +12,8 @@
 
 <?php
 
+include_once "header.php";
+
 class Trainee{
   // properties/field/characteristic/attribute
   // access_modifier fieldname
